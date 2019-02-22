@@ -12,6 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   
@@ -85,20 +95,13 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
 
 
 
 
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
+
+
 
 
 <meta name="description" content="pippip:python install package,python三方包管理工具。安装python解释器时已自带。目录已添加到环境变量中。 包管理工具：包是别人写好的代码。经常有这种情况，比如爬虫框架功能的A包，里面引用了负责解析页面的B包，B包引用了更加基础底层的C包。包关系成树状引用。B包依赖C包。直接使用A包，运行报错缺少B包，缺少依赖包。 为了解决依赖包问题，包管理工具出现，主要功能">
@@ -510,15 +513,34 @@
 		
 	</div>
 	
-	<div>
-      
-        
-
-      
-	</div>
+	
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wcpay.jpg" alt="Mr.Zhang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -688,6 +710,13 @@ var jiathis_config={
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           

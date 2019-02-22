@@ -12,6 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   
@@ -85,20 +95,13 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
 
 
 
 
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
+
+
 
 
 <meta name="description" content="python开发web项目djangodjango安装pip install django 如果电脑上还有别的版本的python解释器，可以用 py -3 -m pip install django或者 py -2 -m pip install django来进行安装。 app应用app必须存在于项目中。 一个项目至少有一个app或者多个app， 创建django项目项目名字可以自己定义，下面的a">
@@ -467,15 +470,34 @@
 		
 	</div>
 	
-	<div>
-      
-        
-
-      
-	</div>
+	
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wcpay.jpg" alt="Mr.Zhang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -639,6 +661,13 @@ var jiathis_config={
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           

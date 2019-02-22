@@ -12,6 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if('123456'){
+            if (prompt('请输入文章密码') !== '123456'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   
@@ -85,34 +95,27 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
 
 
 
 
-<script>
-    (function(){
-        if('123456'){
-            if (prompt('请输入文章密码') !== '123456'){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
 
 
-<meta name="description" content="日记大V较多快深V偶尔喝IE佛IE和缩放">
+
+
+<meta name="description" content="文章访问密码:password">
 <meta name="keywords" content="Hexo,加密">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日记">
 <meta property="og:url" content="https://cheungpengwei.github.io/2019/02/21/日记/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="日记大V较多快深V偶尔喝IE佛IE和缩放">
+<meta property="og:description" content="文章访问密码:password">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-22T02:40:50.799Z">
+<meta property="og:updated_time" content="2019-02-22T05:01:19.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日记">
-<meta name="twitter:description" content="日记大V较多快深V偶尔喝IE佛IE和缩放">
+<meta name="twitter:description" content="文章访问密码:password">
 
 
 
@@ -437,6 +440,10 @@
           
 
           
+              <div class="post-description">
+                  文章访问密码:password
+              </div>
+          
 
         </div>
       </header>
@@ -469,15 +476,34 @@
 		
 	</div>
 	
-	<div>
-      
-        
-
-      
-	</div>
+	
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wcpay.jpg" alt="Mr.Zhang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -649,6 +675,13 @@ var jiathis_config={
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           

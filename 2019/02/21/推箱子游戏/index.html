@@ -12,6 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
   
@@ -85,20 +95,13 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
 
 
 
 
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
+
+
 
 
 <meta name="description" content="推箱子小游戏用python代码写的一个推箱子小游戏，有喜欢的可以玩一下。 代码如下： # 用二维数组表示地图 # X 代表箱子，o 代表小人 map = [ ​    “**“, ​    “  **  “, ​    “ X**  “, ​    “ o      “, ​    “**   *”, ​    “  **  “, ​    “        “, ​    “*   **“, ​">
@@ -109,7 +112,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="推箱子小游戏用python代码写的一个推箱子小游戏，有喜欢的可以玩一下。 代码如下： # 用二维数组表示地图 # X 代表箱子，o 代表小人 map = [ ​    “**“, ​    “  **  “, ​    “ X**  “, ​    “ o      “, ​    “**   *”, ​    “  **  “, ​    “        “, ​    “*   **“, ​">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-22T02:40:50.799Z">
+<meta property="og:updated_time" content="2019-02-22T04:44:16.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="推箱子游戏">
 <meta name="twitter:description" content="推箱子小游戏用python代码写的一个推箱子小游戏，有喜欢的可以玩一下。 代码如下： # 用二维数组表示地图 # X 代表箱子，o 代表小人 map = [ ​    “**“, ​    “  **  “, ​    “ X**  “, ​    “ o      “, ​    “**   *”, ​    “  **  “, ​    “        “, ​    “*   **“, ​">
@@ -608,15 +611,34 @@
 		
 	</div>
 	
-	<div>
-      
-        
-
-      
-	</div>
+	
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wcpay.jpg" alt="Mr.Zhang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -782,6 +804,13 @@ var jiathis_config={
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
